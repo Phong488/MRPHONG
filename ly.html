@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuyết Trình Vật Lý - Nhóm Cao Phong & Trí An</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 50px auto;
+            background: #ffffffcc;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #34495e;
+        }
+
+        .group-name {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #2980b9;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .contact {
+            margin-top: 40px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .stars {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .star {
+            font-size: 30px;
+            color: #bdc3c7;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #f1c40f;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Thuyết Trình Vật Lý</h1>
+        <div class="group-name">Nhóm: Cao Phong và Trí An</div>
+
+        <h2>Sự Phát Triển và Ứng Dụng của Vật Lý</h2>
+
+        <p>
+            Vật lý là một ngành khoa học tự nhiên nghiên cứu về vật chất, năng lượng và các quy luật tương tác trong tự nhiên. 
+            Nó có nguồn gốc từ thời cổ đại, khi các nhà triết học như Archimedes và Aristotle bắt đầu suy nghĩ về chuyển động và lực.
+        </p>
+
+        <p>
+            Tuy nhiên, vật lý hiện đại thực sự phát triển mạnh vào thế kỷ 17 với cuộc cách mạng khoa học. 
+            Isaac Newton đã đặt nền móng cho cơ học cổ điển, và sau đó là sự ra đời của thuyết tương đối (Einstein, đầu thế kỷ 20) và cơ học lượng tử (Planck, Schrödinger, Heisenberg...).
+        </p>
+
+        <p>
+            Thời kỳ phát triển thịnh vượng nhất của vật lý kéo dài từ thế kỷ 19 đến nay, với hàng loạt phát minh vĩ đại: điện từ học, công nghệ hạt nhân, vật lý bán dẫn, và gần đây là vật lý lượng tử ứng dụng trong công nghệ hiện đại.
+        </p>
+
+        <h2>Học Giỏi Vật Lý Có Thể Làm Nghề Gì?</h2>
+
+        <p>
+            Nếu bạn học giỏi vật lý, bạn có thể theo đuổi nhiều nghề nghiệp hấp dẫn và có tiềm năng cao trong tương lai, bao gồm:
+        </p>
+        <ul>
+            <li>Kỹ sư vật lý, kỹ sư điện - điện tử, kỹ sư hàng không</li>
+            <li>Nhà khoa học nghiên cứu vật lý lý thuyết hoặc ứng dụng</li>
+            <li>Kỹ thuật viên y sinh, công nghệ hạt nhân</li>
+            <li>Giáo viên, giảng viên hoặc nhà tư vấn giáo dục</li>
+            <li>Chuyên gia dữ liệu, AI, robot, năng lượng tái tạo</li>
+        </ul>
+
+        <div class="contact">
+            <h3>Thông Tin Liên Hệ</h3>
+            <p>📞 Số điện thoại: <strong>0359710381</strong></p>
+            <p>📧 Gmail: <strong>phamcaophong177@gmail.com</strong></p>
+            <p>Gửi phản hồi hoặc góp ý về bài thuyết trình vui lòng liên hệ qua Gmail trên.</p>
+        </div>
+
+        <div class="stars">
+            <h3>Đánh Giá Bài Thuyết Trình</h3>
+            <span class="star" onclick="rate(1)">★</span>
+            <span class="star" onclick="rate(2)">★</span>
+            <span class="star" onclick="rate(3)">★</span>
+            <span class="star" onclick="rate(4)">★</span>
+            <span class="star" onclick="rate(5)">★</span>
+        </div>
+
+        <footer>
+            &copy; 2025 - Nhóm Cao Phong và Trí An | Thuyết trình môn Vật Lý
+        </footer>
+    </div>
+
+    <script>
+        function rate(starCount) {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((star, index) => {
+                if (index < starCount) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+            alert(`Cảm ơn bạn đã đánh giá ${starCount} sao! Phản hồi sẽ được ghi nhận.`);
+        }
+    </script>
+</body>
+</html>
